@@ -200,7 +200,7 @@ impl GasPool {
             .observe(elapsed as u64);
         debug!(?reservation_id, "Transaction signed by sponsor");
 
-        let tx = Transaction::from_generic_sig_data(tx_data, vec![sponsor_sig])
+        let tx = Transaction::from_generic_sig_data(tx_data, vec![sponsor_sig]);
         let cur_time = std::time::Instant::now();
         let effects = self.sui_client.execute_transaction(tx, 3).await?;
         debug!(?reservation_id, "Transaction executed");
