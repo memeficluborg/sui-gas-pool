@@ -31,7 +31,7 @@ cargo build
 
 5. Run service 
 ```
-/target/release/sui-gas-station --config-path config.yaml
+./target/release/sui-gas-station --config-path config.yaml
 ```
 
 ## User Flow
