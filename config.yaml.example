@@ -1,0 +1,15 @@
+---
+signer-config:
+  local:
+    keypair: <KEYPAIR>
+rpc-host-ip: 0.0.0.0
+rpc-port: 9527
+metrics-port: 9184
+gas-pool-config:
+  redis:
+    redis_url: "redis://localhost:6379"
+fullnode-url: "https://rpc.testnet.sui.io:443"
+coin-init-config:
+  target-init-balance: 2000000
+  refresh-interval-sec: 600
+daily-gas-usage-cap: 1500000000000

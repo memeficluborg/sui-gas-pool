@@ -5,6 +5,35 @@ by a sponsor address and provides APIs to reserve gas coins and use them to pay 
 scalability and high throughput by managing a large number of gas coin objects in the pool, so that it can sponsor a
 large number of transactions concurrently.
 
+
+# How to run?
+
+1. Run redis
+```
+redis-server
+```
+
+2. Install cargo, check version
+```
+cargo -v
+```
+
+3. Compile 
+```
+cargo build --release
+```
+Debug version:
+```
+cargo build
+```
+
+4. Edit ```config.yaml.example``` and copy it as ```config.yaml``` to ```target/debug``` and/or ```target/release``` folders
+
+5. Run service 
+```
+/target/release/sui-gas-station --config-path config.yaml
+```
+
 ## User Flow
 
 A typical flow that interacts with the gas pool service looks like the following:
